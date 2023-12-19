@@ -8,7 +8,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://vercel-1ilp.vercel.app/register', { username, password });
+      await axios.post('https://backend-seven-wine.vercel.app/register', { username, password });
       console.log('Registered successfully');
     } catch (error) {
       console.error('Registration failed:');

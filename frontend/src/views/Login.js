@@ -8,7 +8,7 @@ function Login({ setToken }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://vercel-1ilp.vercel.app/login', { username, password });
+      const response = await axios.post('https://backend-seven-wine.vercel.app/login', { username, password });
       setToken(response.data.token);
     } catch (error) {
       console.error('Login failed:');

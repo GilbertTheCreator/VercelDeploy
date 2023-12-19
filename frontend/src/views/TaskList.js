@@ -7,7 +7,7 @@ const TaskList = ({ token }) => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('https://vercel-1ilp.vercel.app/tasks', {
+        const response = await axios.get('https://backend-seven-wine.vercel.app/tasks', {
           headers: {
             Authorization: token,
           },
@@ -23,7 +23,7 @@ const TaskList = ({ token }) => {
 
   const handleDeleteAll = async () => {
     try {
-      await axios.delete('https://vercel-1ilp.vercel.app/tasks', {
+      await axios.delete('https://backend-seven-wine.vercel.app/tasks', {
         headers: {
           Authorization: token,
         },

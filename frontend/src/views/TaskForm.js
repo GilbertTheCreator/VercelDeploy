@@ -7,7 +7,7 @@ function TaskForm({ token }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://vercel-1ilp.vercel.app/tasks', { title }, { headers: { Authorization: token } });
+      await axios.post('https://backend-seven-wine.vercel.app/tasks', { title }, { headers: { Authorization: token } });
       console.log('Task created successfully');
     } catch (error) {
       console.error('Error creating task:', error.message);

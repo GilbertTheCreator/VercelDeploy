@@ -10,7 +10,12 @@ const port = 3001;
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: 'OPTIONS, GET, POST, PUT, DELETE',
+  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+  credentials: true,
+}));
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('connected', () => {

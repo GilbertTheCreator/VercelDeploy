@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    {
+      "src": "/register",
+      "methods": ["OPTIONS", "POST"],
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://vercel-jade-eight.vercel.app",
+        "Access-Control-Allow-Methods": "OPTIONS, POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    },
+    {
+      "src": "/login",
+      "methods": ["OPTIONS", "POST"],
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://vercel-jade-eight.vercel.app",
+        "Access-Control-Allow-Methods": "OPTIONS, POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    },
+    {
+      "src": "/tasks",
+      "methods": ["OPTIONS", "GET", "POST", "DELETE"],
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://vercel-jade-eight.vercel.app",
+        "Access-Control-Allow-Methods": "OPTIONS, GET, POST, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://Gilbert:V89EKOUwRu3x41sO@1.h0mvxrz.mongodb.net/taskapp",
+    "JWT_SECRET_KEY": "key"
+  }
+}
